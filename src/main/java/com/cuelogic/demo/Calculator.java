@@ -1,11 +1,8 @@
     package com.cuelogic;
 
     import java.util.Scanner;
-    import static org.junit.Assert.*;
 
     public class Calculator {
-        
-        @Test
 
         public static void main(String[] args) {
 
