@@ -1,4 +1,4 @@
-    package com.cuelogic;
+    package com.cuelogic.demo;
 
     import java.util.Scanner;
 
