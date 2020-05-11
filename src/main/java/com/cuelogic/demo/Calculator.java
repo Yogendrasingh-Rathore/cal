@@ -15,7 +15,7 @@
         System.out.println(new Calculator().cal(operator,first,second));
 	}
 	
-	private static double cal(String operator, double first, double second)
+	private static double cal(char operator, double first, double second)
 	{
 	    double result;
             
