@@ -3,6 +3,42 @@ pipeline {
    tools {
       maven "mvn3.6"
    }
+
+    properties([
+        [
+            $class: 'JiraProjectProperty'
+        ], 
+        [
+            $class: 'RebuildSettings', 
+            autoRebuild: false, 
+            rebuildDisabled: false
+        ], 
+        parameters(
+            [            
+                string(
+                    defaultValue: '', 
+                    description: '', 
+                    name: 'Enter FIrst Number :', 
+                    trim: false
+                ), 
+                
+                string(
+                    defaultValue: '', 
+                    description: '', 
+                    name: 'Enter Second Number :', 
+                    trim: false
+                ),
+
+                choice(
+                    choices: ['+', '-', '*', '/'], 
+                    description: 'Choose an Operator to perform Calculation', 
+                    name: 'Operation'
+                )
+            ]
+        )
+    ])
+
+
     stages {
         stage('Build') {
             steps {
@@ -10,4 +46,4 @@ pipeline {
             }
         }
     }
-}    
+} 
