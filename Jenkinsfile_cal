@@ -55,7 +55,8 @@ node{
              }          
             }
             
-            stage('Deliver') {            
+            stage('Deliver') {   
+                sh 'chmod 777 ./delivery.sh'
                 sh './delivery.sh'        
             }
     
