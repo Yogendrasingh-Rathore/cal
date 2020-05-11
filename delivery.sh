@@ -25,4 +25,4 @@ set +x
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
-java -jar target/cal-1.0-SNAPSHOT.jar -Darguments="-Dparam1=${First_Number} -Dparam2=${Second_Number}"
+java -jar target/cal-1.0-SNAPSHOT.jar -Darguments="${First_Number} ${Second_Number} ${Operation}"
