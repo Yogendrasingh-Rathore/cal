@@ -7,7 +7,7 @@
     private static double first = 10;
     private static double second = 20;
             
-    private static String operator = "+";
+    private static char operator = '+';
     
     public Calculator(){}
             
@@ -21,14 +21,14 @@
             
             switch(operator)
             {
-                case "+":
+                case '+':
                     result = first + second;
                     break;
                 
-                case "*":
+                case '*':
                     result = first * second;
                     break;
-                case "/":
+                case '/':
                     result = first / second;
                     break;
                 // operator doesn't match any case constant (+, -, *, /)
