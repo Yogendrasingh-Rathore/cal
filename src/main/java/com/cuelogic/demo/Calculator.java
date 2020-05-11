@@ -4,36 +4,39 @@
 
     public class Calculator {
 
-        public static void main(String[] args) {
-
-            Scanner reader = new Scanner(System.in);
+    private static double first = 10;
+    private static double second = 20;
             
-            System.out.print("Enter two numbers: ");
-            double first = reader.nextDouble();
-            double second = reader.nextDouble();
-
-            System.out.print("Enter an operator (+, -, *, /): ");
+    private static String operator = "+";
+    
+    public Calculator(){}
             
-            char operator = reader.next().charAt(0);
-            double result;
+	public static void main(String[] args) {
+        System.out.println(new Calculator().cal(operator,first,second));
+	}
+	
+	private static double cal(String operator, double first, double second)
+	{
+	    double result;
             
             switch(operator)
             {
-                case '+':
+                case "+":
                     result = first + second;
                     break;
                 
-                case '*':
+                case "*":
                     result = first * second;
                     break;
-                case '/':
+                case "/":
                     result = first / second;
                     break;
                 // operator doesn't match any case constant (+, -, *, /)
                 default:
                     System.out.printf("Error! operator is not correct");
-                    return;
+                    return 0;
             }
-            System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, result);
-        }
+            return result;
+            //System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, result);
+	}
     }
