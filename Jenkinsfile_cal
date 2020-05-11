@@ -33,7 +33,10 @@
     ])
 
 
-node{               
+node{
+    stage('Git Checkout'){
+        git 'https://github.com/Yogendrasingh-Rathore/cal.git'
+    }
             stage('Build') {
             withMaven(
                     maven: 'mvn3.6'
