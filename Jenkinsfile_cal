@@ -33,27 +33,28 @@
     ])
 
 
-node{
-    withMaven(
-                    maven: 'mvn3.6'
-             )
-    {              
+node{               
             stage('Build') {
-                  
+            withMaven(
+                    maven: 'mvn3.6'
+             )           
                   {
                     sh 'mvn -B -DskipTests clean package'
                   }
             }
             stage('Test') { 
-            
+            withMaven(
+                    maven: 'mvn3.6'
+             )
+             {
                 sh 'mvn test' 
-            
+             }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml' 
                 }
             }
         }
-    }
+    
     }
     
