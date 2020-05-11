@@ -12,14 +12,14 @@
                 string(
                     defaultValue: '', 
                     description: '', 
-                    name: 'Enter FIrst Number :', 
+                    name: 'First_Number', 
                     trim: false
                 ), 
                 
                 string(
                     defaultValue: '', 
                     description: '', 
-                    name: 'Enter Second Number :', 
+                    name: 'Second_Number', 
                     trim: false
                 ),
 
@@ -42,7 +42,7 @@ node{
                     maven: 'mvn3.6'
              )           
                   {
-                    sh 'mvn -B -DskipTests clean package'
+                    sh 'mvn -B -DskipTests clean package -Darguments="-Dparam1=${First_Number} -Dparam2=${Second_Number}"'
                   }
             }
             
