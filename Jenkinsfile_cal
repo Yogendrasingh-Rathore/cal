@@ -53,7 +53,7 @@ node{
             }
             
             stage('Deliver') {            
-                sh './scripts/delivery.sh'        
+                sh './script/delivery.sh'        
             }
     
     }
