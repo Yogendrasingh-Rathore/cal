@@ -4,15 +4,15 @@
 
     public class Calculator {
 
-    private static double first = 10;
-    private static double second = 20;
-            
-    private static char operator = '+';
     
     public Calculator(){}
             
 	public static void main(String[] args) {
-        System.out.println(new Calculator().cal(operator,first,second));
+		double first = Double.parseDouble(args[0]);
+        	double second = Double.parseDouble(args[1]);
+        	char operator = args[2].charAt(0);
+        	
+		System.out.println(new Calculator().cal(operator,first,second));
 	}
 	
 	private static double cal(char operator, double first, double second)
@@ -24,7 +24,9 @@
                 case '+':
                     result = first + second;
                     break;
-                
+                case '-':
+                    result = first - second;
+                    break;			   
                 case '*':
                     result = first * second;
                     break;
