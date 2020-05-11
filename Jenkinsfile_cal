@@ -34,10 +34,12 @@
 
 
 node{
-            stage('Build') {
-                  withMaven(
+    withMaven(
                     maven: 'mvn3.6'
-                  )
+             )
+                  
+            stage('Build') {
+                  
                   {
                     sh 'mvn -B -DskipTests clean package'
                   }
