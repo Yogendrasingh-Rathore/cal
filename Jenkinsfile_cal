@@ -1,7 +1,3 @@
-   tools {
-      maven "mvn3.6"
-   }
-
     properties([
         [
             $class: 'JiraProjectProperty'
