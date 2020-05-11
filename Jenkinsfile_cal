@@ -56,8 +56,13 @@ node{
             }
             
             stage('Deliver') {   
-                sh 'chmod 777 ./delivery.sh'
-                sh './delivery.sh'        
+                withMaven(
+                    maven: 'mvn3.6'
+                )
+                {
+                    sh 'chmod 777 ./delivery.sh'
+                    sh './delivery.sh'        
+                }
             }
     
     }
