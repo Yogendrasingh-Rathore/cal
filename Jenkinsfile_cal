@@ -42,15 +42,19 @@ node{
                     sh 'mvn -B -DskipTests clean package'
                   }
             }
+            
             stage('Test') { 
             withMaven(
                     maven: 'mvn3.6'
              )
              {
                 sh 'mvn test' 
-             }
+             }          
+            }
             
-        }
+            stage('Deliver') {            
+                sh './scripts/delivery.sh'        
+            }
     
     }
     
