@@ -46,6 +46,9 @@
                     <goals>
                         <goal>write-project-properties</goal>
                     </goals>
+                    <configuration>
+                        <outputFile>${project.build.outputDirectory}/my.properties</outputFile>
+                    </configuration>
                 </execution>
             </executions>
         </plugin>
