@@ -20,8 +20,9 @@
 			//double first = Double.parseDouble(args[0]);
 			//double second = Double.parseDouble(args[1]);
 			//char operator = args[2].charAt(0);
-
-			System.out.println(new Calculator().cal(operator,first,second));
+			System.out.println("****************************************");
+			System.out.println("The Result is : "+ new Calculator().cal(operator,first,second));
+			System.out.println("****************************************");
 		}
 		catch(IOException e) {
   			e.printStackTrace();
