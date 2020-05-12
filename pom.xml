@@ -47,7 +47,7 @@
                         <goal>write-project-properties</goal>
                     </goals>
                     <configuration>
-                        <outputFile>${project.build.outputDirectory}/my.properties</outputFile>
+                        <outputFile>/src/main/java/com/cuelogic/demo/my.properties</outputFile>
                     </configuration>
                 </execution>
             </executions>
