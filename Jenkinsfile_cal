@@ -51,7 +51,7 @@ node{
                     Commons.Logger.echoColor(33, "First Number : \"${First_Number}\".")
                     Commons.Logger.echoColor(33, "First Number : \"${Second_Number}\".")
                     Commons.Logger.echoColor(33, "First Number : \"${Operation}\".")
-                    Commons.Logger.echoColor(31, 
+                    Commons.Logger.echoColor(32, 
                         "sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'"
                     )
                   }
@@ -62,7 +62,7 @@ node{
                     maven: 'mvn3.6'
              )
              {
-                sh 'mvn test' 
+                Commons.Logger.echoColor(32,"sh 'mvn test'")
              }          
             }
             
@@ -71,8 +71,8 @@ node{
                     maven: 'mvn3.6'
                 )
                 {
-                    sh 'chmod 700 ./script/delivery.sh'
-                    sh './script/delivery.sh'        
+                    Commons.Logger.echoColor(32, "sh 'chmod 700 ./script/delivery.sh'")
+                    Commons.Logger.echoColor(33, "sh './script/delivery.sh'")
                 }
             }
         })
