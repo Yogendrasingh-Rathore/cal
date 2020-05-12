@@ -49,8 +49,8 @@ node{
              )           
                   {Commons.Logger.echoColor(33, 'Verifying Choice input with selected value')
                     Commons.Logger.echoColor(33, "First Number : \"${First_Number}\".")
-                    Commons.Logger.echoColor(33, "First Number : \"${Second_Number}\".")
-                    Commons.Logger.echoColor(33, "First Number : \"${Operation}\".")
+                    Commons.Logger.echoColor(33, "Second Number : \"${Second_Number}\".")
+                    Commons.Logger.echoColor(33, "Operation to Perform : \"${Operation}\".")
                     Commons.Logger.echoColor(32, 
                         "sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'"
                     )
