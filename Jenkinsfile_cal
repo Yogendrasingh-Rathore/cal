@@ -38,6 +38,7 @@ properties([
 
 
 node{
+  Commons.Pipeline.standardWrapper({
     stage('Git Checkout'){
         Commons.Logger.echoColor(33, 'Importing git Yogendrasingh-Rathore/cal.git')
         git 'https://github.com/Yogendrasingh-Rathore/cal.git'
@@ -46,7 +47,7 @@ node{
             withMaven(
                     maven: 'mvn3.6'
              )           
-                  {
+                  {Commons.Logger.echoColor(33, 'Verifying Choice input with selected value')
                     Commons.Logger.echoColor(33, "First Number : \"${First_Number}\".")
                     Commons.Logger.echoColor(33, "First Number : \"${Second_Number}\".")
                     Commons.Logger.echoColor(33, "First Number : \"${Operation}\".")
@@ -72,6 +73,6 @@ node{
                     sh './script/delivery.sh'        
                 }
             }
-    
+        })
     }
     
