@@ -14,6 +14,11 @@
       <version>4.12</version>
     </dependency>
   </dependencies>
+  <properties>
+    <First_Number>${First_Number}</First_Number>
+    <Second_Number>${Second_Number}</Second_Number>
+    <Operation>${Operation}</Operation>
+  </properties>
   <build>
     <plugins>
       <plugin>
