@@ -54,6 +54,7 @@ node{
                     Commons.Logger.echoColor(32, 
                         "sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'"
                     )
+                    sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'
                   }
             }
             
@@ -63,6 +64,7 @@ node{
              )
              {
                 Commons.Logger.echoColor(32,"sh 'mvn test'")
+                sh 'mvn test'
              }          
             }
             
@@ -71,8 +73,10 @@ node{
                     maven: 'mvn3.6'
                 )
                 {
-                    Commons.Logger.echoColor(32, "sh 'chmod 700 ./script/delivery.sh'")
+                    Commons.Logger.echoColor(32, "Adding Executable Permission to delivery.sh")
+                    sh 'chmod 700 ./script/delivery.sh'
                     Commons.Logger.echoColor(33, "sh './script/delivery.sh'")
+                    sh './script/delivery.sh'
                 }
             }
         })
