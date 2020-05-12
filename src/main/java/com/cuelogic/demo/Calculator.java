@@ -8,7 +8,7 @@
     public Calculator(){}
             
 	public static void main(String[] args) {
-		java.io.InputStream inputStream = this.getClass().getResourceAsStream("my.properties");
+		java.io.InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("my.properties");
  		java.util.Properties properties = new Properties();
  		properties.load(inputStream);
  		double first = Double.parseDouble(properties.getProperty("First_Number"));
