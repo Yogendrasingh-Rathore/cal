@@ -1,6 +1,6 @@
     package com.cuelogic.demo;
 
-    import java.util.Scanner;
+    import java.util.*;
 
     public class Calculator {
 
@@ -8,9 +8,17 @@
     public Calculator(){}
             
 	public static void main(String[] args) {
-		double first = Double.parseDouble(args[0]);
-        	double second = Double.parseDouble(args[1]);
-        	char operator = args[2].charAt(0);
+		java.io.InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("my.properties");
+ 		java.util.Properties properties = new Properties();
+ 		properties.load(inputStream);
+ 		double first = Double.parseDouble(properties.getProperty("First_Number"));
+		double second = Double.parseDouble(properties.getProperty("Second_Number"));
+		String operator_input = properties.getProperty("Operation");
+		char operator = operator_input.charAt(0);
+		
+		//double first = Double.parseDouble(args[0]);
+        	//double second = Double.parseDouble(args[1]);
+        	//char operator = args[2].charAt(0);
         	
 		System.out.println(new Calculator().cal(operator,first,second));
 	}
