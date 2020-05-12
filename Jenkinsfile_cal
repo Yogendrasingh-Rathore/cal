@@ -61,8 +61,8 @@ node{
                     maven: 'mvn3.6'
                 )
                 {
-                    sh 'chmod 777 ./script/delivery.sh'
-                    sh './delivery.sh'        
+                    sh 'chmod 700 ./script/delivery.sh'
+                    sh './script/delivery.sh'        
                 }
             }
     
