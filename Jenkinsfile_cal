@@ -43,7 +43,7 @@ node{
              )           
                   {
                     sh "echo ${First_Number} + '  ' + ${Second_Number} + '  ' + ${Operation}"
-                    sh 'mvn -B -DskipTests clean install -Darguments="-Dparam1=${First_Number} -Dparam2=${Second_Number}"'
+                    sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'
                   }
             }
             
