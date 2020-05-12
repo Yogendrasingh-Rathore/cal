@@ -52,7 +52,7 @@ node{
                     Commons.Logger.echoColor(33, "First Number : \"${Second_Number}\".")
                     Commons.Logger.echoColor(33, "First Number : \"${Operation}\".")
                     Commons.Logger.echoColor(31, 
-                        sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'
+                        "sh 'mvn -B -DskipTests clean install package -DFirst_Number=${First_Number} -DSecond_Number=${Second_Number} -DOperation=${Operation}'"
                     )
                   }
             }
